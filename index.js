@@ -86,12 +86,12 @@ async function sendMessageToWechat(text, desp) {
 const fetchSummaryWithRetry = async times => {
   const yesterday = dayjs()
     .subtract(1, 'day')
-    .format('YYYY-MM-DD')
+    .format('MM-DD')
   try {
     const mySummary = await getMySummary(yesterday)
     await updateGist(yesterday, mySummary.data)
     await sendMessageToWechat(
-      `${yesterday} update successfully!`,
+      `${yesterday} wakatime.`,
       getMessageContent(yesterday, mySummary.data)
     )
   } catch (error) {
