@@ -2,6 +2,7 @@ name: Update gist with WakaTime summary
 on:
   schedule:
     - cron: '40 1 * * *'
+  workflow_dispatch:
 jobs:
   update-gist:
     runs-on: ubuntu-latest
