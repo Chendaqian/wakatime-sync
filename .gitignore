@@ -83,3 +83,4 @@ $RECYCLE.BIN/
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
 build/
+/.vs
