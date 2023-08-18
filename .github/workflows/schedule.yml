@@ -7,9 +7,9 @@ jobs:
   update-gist:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@master@v3
       - name: Update gist
-        uses: ChenDaqian/wakatime-sync@master
+        uses: ChenDaqian/wakatime-sync@master@v2
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GIST_ID: ${{ secrets.GIST_ID}}
