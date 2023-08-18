@@ -3,11 +3,16 @@ on:
   schedule:
     - cron: '30 13 * * *'
   workflow_dispatch:
+  push:
+    branches:
+      - master
+    
 jobs:
   update-gist:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
       - name: Update gist
         uses: ChenDaqian/wakatime-sync@master
         env:
